@@ -6,7 +6,7 @@ import { Connection, PublicKey, clusterApiUrl } from '@solana/web3.js'
 import { Program, Provider, web3 } from '@project-serum/anchor'
 import kp from './keypair.json'
 
-const { SystemProgram, Keypair } = web3
+const { SystemProgram } = web3
 
 const baseAccount = web3.Keypair.fromSecretKey(new Uint8Array(Object.values(kp._keypair.secretKey)))
 const programID = new PublicKey(idl.metadata.address)
